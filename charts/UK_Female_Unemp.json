@@ -1,0 +1,38 @@
+{"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "title": {
+      "text": "UK Unemployment Rate for Women",
+      "subtitle":"Unemployment rate for all Women aged 16-64 source: ONS",
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start",
+      "color": "black"},
+  
+  "data":{
+      "url": "https://raw.githubusercontent.com/MorganDaviesEcon/MorganDaviesEcon.github.io/main/Task5data_ONS-MGSZ.json",
+      "format": {"type":"json","property": "months"}},
+  
+  "height": 300,
+  "width": 300,
+
+  "mark": {
+    "type": "line",
+    "color": "rgb(0,47,167"},
+
+"encoding": {
+     "x": {
+       "field": "date",
+       "type": "temporal",
+       "axis": {
+         "title": null,
+         "grid": false,
+         "ticks": false,
+         "labelAngle": 45}},
+
+      "y": {
+        "field": "value",
+        "type": "quantitative",
+        "title": "",
+        "axis": {"grid": false}}
+}
+}
