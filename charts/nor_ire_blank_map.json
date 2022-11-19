@@ -1,0 +1,44 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+    "width":500,
+    "height":500,
+  
+  "title": {
+      "text": "Map of Northern Ireland",
+      "subtitle":["Mercator Projection",""],
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "middle",
+      "color": "black"
+      },
+  
+  "config": {
+        "background":"white",
+        "view": {"stroke": "transparent"}},
+  
+    "data":{
+      "url":"https://raw.githubusercontent.com/MorganDaviesEcon/MorganDaviesEcon.github.io/main/northireland_map.json",
+      "format":{
+        "type": "topojson",
+        "feature":"wpc"}},
+  
+        "projection":{
+          "type":"mercator"
+        },
+  
+        "mark":{
+          "type":"geoshape",
+          "fill":"lightgray",
+          "stroke":"white",
+          "strokeWidth":1
+          },
+  "encoding": {
+    "tooltip": {"field":"properties.PC_NAME"}
+  
+  }
+  
+  
+          
+  
+    }

@@ -1,0 +1,69 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "width":500,
+  "height":500,
+
+"title": {
+    "text": "Northern Ireland",
+    "subtitle":["Number of Electoral Votes in Each Constituency - Nov 2022 - Source: EONI ",""],
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":10,
+    "anchor": "middle",
+    "color": "black"
+    },
+
+"config": {
+      "background":"white",
+      "view": {"stroke": "transparent"}},
+
+  "data":{
+    "url":"https://raw.githubusercontent.com/MorganDaviesEcon/MorganDaviesEcon.github.io/main/northireland_map.json",
+    "format":{
+      "type": "topojson",
+      "feature":"wpc"}},
+
+"transform": [
+        {
+          "lookup": "properties.PC_NAME",
+
+          "from":{
+            "data":{
+              "url": "https://raw.githubusercontent.com/MorganDaviesEcon/MorganDaviesEcon.github.io/main/northern_ireland_electoral_new.csv"},
+              "key": "constituency",
+              "fields": ["electorate"]
+            }
+          }
+      ],
+
+
+      "projection":{
+        "type":"mercator"
+      },
+
+      "mark":{
+        "type":"geoshape",
+        "stroke":"white",
+        "strokeWidth":1
+        },
+
+
+"encoding": {
+  "tooltip": [
+  {"field":"properties.PC_NAME","type": "nominal","title":"Constituency"},
+  {"field":"electorate","title":"Votes"}
+ ],
+
+  "color": {
+     "field": "electorate",
+     "type": "quantitative",
+     "scale":{"scheme":"inferno"},
+    "legend":{
+      "orient":"top-left",
+      "direction": "vertical"
+      }
+
+    }
+}
+
+}
