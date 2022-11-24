@@ -1,0 +1,57 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+
+    "description": "Example of Cross Origin Resource Sharing (CORS) problem",
+    "description": "This url WILL deliver data to browser, but WILL NOT load to Vega or JS Fetch: https://api.ons.gov.uk/timeseries/mgsx/dataset/lms/data",
+    "description": "So add this prefix: https://api.allorigins.win/raw?url=",
+    "description": "The resulting url, used below, will load into Vega (and JavaScript's fetch).",
+
+
+    "data": {
+      "url": "https://api.allorigins.win/raw?url=https://api.ons.gov.uk/timeseries/JPC5/dataset/lms/data",
+      "format": {
+        "type":"json",
+        "property": "months"
+      }},
+  
+    "mark":{
+      "type": "line",
+      "color":"rgb(0,47,167)",
+      "strokeWidth":2,
+      "opacity":1
+    },
+
+
+    "title": {
+    "text": "UK Labour Market Shortage",
+    "subtitle": "Number of Unemployed People per Vacancy - Source: ONS",
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":10,
+    "anchor": "start",
+    "color": "black"
+  },
+
+    "width":300,
+    "height":300,
+
+    "encoding": {
+      
+      "x": {
+        "field": "date", 
+        "type": "temporal",
+        "title":null,
+        "axis": {
+         "title": null,
+         "grid": false,
+         "ticks": false,
+         "labelAngle": 45}
+        },
+  
+      "y": {
+        "field": "value", 
+        "type": "quantitative",
+        "title":null
+        }
+    }
+}

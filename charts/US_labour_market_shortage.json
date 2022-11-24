@@ -1,0 +1,37 @@
+{"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "title": {
+      "text": "US Labour Market Shortage",
+      "subtitle":"Unemployment Level/Job Openings: Total Nonfarm - Source: FRED",
+      "subtitleFontStyle":"italic",
+      "subtitleFontSize":10,
+      "anchor": "start",
+      "color": "black"},
+  
+  "data":{"url": "https://raw.githubusercontent.com/MorganDaviesEcon/MorganDaviesEcon.github.io/main/US_labour_market_tightness.csv"},
+
+  
+  "height": 300,
+  "width": 300,
+
+  "mark": {
+    "type": "line",
+    "color": "rgb(0,47,167"},
+
+"encoding": {
+     "x": {
+       "field": "DATE",
+       "type": "temporal",
+       "axis": {
+         "title": null,
+         "grid": false,
+         "ticks": false,
+         "labelAngle": 45}},
+
+      "y": {
+        "field": "ratio",
+        "type": "quantitative",
+        "title": ""
+        }
+}
+}
