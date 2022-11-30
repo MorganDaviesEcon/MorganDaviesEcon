@@ -1,0 +1,56 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+    "title": {
+        "text": "HDI vs GDP per Capita",
+        "subtitle":["Human Development Index (x), GDP per Capita (y). 2020 data, Source: World Bank"],
+        "subtitleFontStyle":"italic",
+        "subtitleFontSize":10,
+        "anchor": "start",
+        "color": "black"
+      },  
+  
+    
+    "description": "A scatterplot showing horsepower and miles per gallons for various cars.",
+  
+     "config": {
+      "background":"white",
+      "view": {
+        "stroke": "transparent"}},
+  
+    "data": {"url": "https://raw.githubusercontent.com/MorganDaviesEcon/MorganDaviesEcon.github.io/main/GDP_HDI_Actual.csv" },
+    "mark":{
+      "type":"circle",
+      "color":"green",
+      "opacity":0.5
+      },
+  
+      "height": 300,
+      "width": 300,
+  
+    "encoding": {
+      "x": {
+          "field": "HDI", "type": "quantitative",
+          "scale": {"domain": [0,1]},
+          "axis":{"grid": false},
+          "title":null
+          },
+  
+  
+      "y": {
+            "field": "GDPpc", "type": "quantitative",
+            "scale":{"domain":[0,180000]},
+            "axis":{"grid": false},
+            "title":null
+          },
+            
+  
+        "tooltip":[
+          {"field":"Country Name", "type": "ordinal", "title":"Country"},
+          {"field":"GDPpc", "type": "quantitative", "title":"GDP per Capita (US$)"},
+          {"field":"HDI", "type": "quantitative", "title":"Human Deveopment Index"}
+  
+  
+        ]
+    }
+  }
