@@ -1,140 +1,29 @@
-
-<!DOCTYPE html>
-<html lang="en">
-
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Title for the page -->
+<head>    
+    <!-- Title for the page in tab -->
     <title>Data Science Project</title>
 
-    <!-- Link to my style sheet -->
-    <link rel="stylesheet" href="index2.css">
+    <!-- Link to my style sheet for the page-->
+    <link rel="stylesheet" href="Video_tutorial.css">
+    <script src="Video_tutorial.js"></script>
 
-    <!--The next three lines allow the Vega embed-->
-    <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+
 </head>
 
-
-
 <body>
-    <div class="myTitle">
-        <h1>Data Science Project - Morgan Davies</h1>
-    
+    <script src="Video_tutorial.js"></script>
+
+
+<div id="menu">
+    <div id="menu-items">
+        <a href="portfolio.html" class="menu-item">Portfolio</a>
+        <a href="project.html" class="menu-item">Project</a>
+        <a href="https://github.com/MorganDaviesEcon/MorganDaviesEcon.github.io" class="menu-item">Github</a>
     </div>
-    <!-- A div that contains a group of items for week 1. Can be useful for setting background colours etc.  -->
-    <div class="myWeek1">
-        <h1>Week 1 Tasks</h1>
-
-        <h3>Setting up web page, and embedding two charts</h3>
-        
-        <h3>Football</h3>
-        <p>The first chart tracks cumulative goals scored for home and away teams in a premier league season</p>
-        <div class="chart" id="Chart1"></div>
-
-        <h3>Bitcoin</h3>
-        <p>My second chart looks at the daily price of bitcoin</p>
-        <div class="chart" id="Chart2"> </div>
-    </div> 
-    <div class="myWeek1">
-        <h1>Week 2 Tasks</h1>
-
-        <h3>Two charts, replicating one from the Financial Times and one that is my own</h3>
-
-        <div class="chart" id="Chart3"> </div>
-
-        <p>Cleaning the data to represent IMF lending as a percentage of global GDP</p>
-
-        <div class="chart" id="Chart4"> </div>
-
-        <p>The most lending relative to global GDP at the time was in 1984, indicating that this would have been riskier than present years.</p>
-
-    </div>
-    <div class="myWeek1">
-        <h1>Week 3 Tasks</h1>
-
-        <h3>Python Work</h3>
-        
-        <h3>Football</h3>
-        <p>The first chart tracks cumulative goals scored for home and away teams in a premier league season</p>
-        <div class="chart" id="Chart5"></div>
-
-    </div> 
-    <div class="myWeek1">
-        <h1>Week 4 Tasks</h1>
-
-        <h3>Data Scraping</h3>
-        
-        <h3></h3>
-        <p>The first chart tracks cumulative goals scored for home and away teams in a premier league season</p>
-        <div class="chart" id="Chart6"></div>
-
-    </div> 
-    <div class="myWeek2">
-        <h1>Week 5 Tasks</h1>
-
-        <h3>Python Loops</h3>
-        
-        <h3></h3>
-        <p>The first chart tracks cumulative goals scored for home and away teams in a premier league season</p>
-        <div class="chart" id="Chart7"></div>
-        <div class="chart" id="Chart8"></div>
-        <div class="chart" id="Chart9"></div>
-        <div class="chart" id="Chart10"></div>
-        <div class="chart" id="Chart11"></div>
-        <div class="chart" id="Chart12"></div>
-        <div class="chart" id="Chart13"></div>
-        <div class="chart" id="Chart14"></div>
-        <div class="chart" id="Chart15"></div>
-
-
-    </div> 
+    <div id="menu-background-pattern"></div>
+</div>
 
 </body>
-
-
-<script>
-    //Define charts:
-    var myChart1 = "charts/chartfootball.json";
-    var myChart2 = "charts/chartcrypto.json";
-    var myChart3 = "charts/imfcredit.json";
-    var myChart4 = "charts/imfcreditcleaned.json";
-    var myChart5 = "charts/week3HW.json";
-    var myChart6 = "charts/F1_top10.json";
-    var myChart7 = "charts/UK_Employment.json";
-    var myChart8 = "charts/UK_Unemployment.json";
-    var myChart9 = "charts/UK_Inactive.json";
-    var myChart10 = "charts/UK_Male_Emp.json";
-    var myChart11 = "charts/UK_Male_Unemp.json";
-    var myChart12 = "charts/UK_Male_Inactive.json";
-    var myChart13 = "charts/UK_Female_Emp.json";
-    var myChart14 = "charts/UK_Female_Unemp.json";
-    var myChart15 = "charts/UK_Female_Inactive.json";
-    
-
-
-    // Embed charts:
-    vegaEmbed('#Chart1', myChart1);
-    vegaEmbed('#Chart2', myChart2);
-    vegaEmbed('#Chart3', myChart3);
-    vegaEmbed('#Chart4', myChart4);
-    vegaEmbed('#Chart5', myChart5);
-    vegaEmbed('#Chart6', myChart6);
-    vegaEmbed('#Chart7', myChart7);
-    vegaEmbed('#Chart8', myChart8);
-    vegaEmbed('#Chart9', myChart9);
-    vegaEmbed('#Chart10', myChart10);
-    vegaEmbed('#Chart11', myChart11);
-    vegaEmbed('#Chart12', myChart12);
-    vegaEmbed('#Chart13', myChart13);
-    vegaEmbed('#Chart14', myChart14);
-    vegaEmbed('#Chart15', myChart15);
-  
-</script>
-
-</html>
