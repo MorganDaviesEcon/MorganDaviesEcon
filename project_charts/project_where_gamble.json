@@ -1,0 +1,93 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/MorganDaviesEcon/MorganDaviesEcon.github.io/main/NEW_project_gambling_activities_test.csv"
+  },
+  "title": {
+    "text": "Where are People Gambling?",
+    "subtitle": [
+      "Percent of Individuals who Gamble Within the Last 4 Weeks by Activity",
+      "Source: Gambling Comission",
+      ""
+    ],
+    "subtitleFontStyle": "italic",
+    "fontSize": 14.5,
+    "subtitleFontSize": 11.2,
+    "anchor": "middle",
+    "color": "#000000",
+    "subtitleColor": "#000000"
+  },
+  "height": 350,
+  "width": 290,
+  "config": {
+    "padding": {"top": 10},
+    "background": "rgb(251, 245, 233)",
+    "view": {"stroke": "transparent"}
+  },
+  "repeat": {"layer": ["Year to Sept 2018","Year to Sept 2019","Year to Sept 2020","Year to Sept 2021","Year to Sept 2022"]},
+  "spec": {
+    "mark": "bar",
+    "encoding": {
+      "y": {
+        "field": "gambling_activity",
+        "type": "nominal",
+        "title": null,
+        "axis": {"grid": false, "gridColor": "black"},
+        "sort":{"field":"Year to Sept 2018","order":"descending"}
+      },
+      "x": {
+        "field": {"repeat": "layer"},
+        "type": "quantitative",
+        "title": "Percentage %",
+        "axis": {
+          "grid": false,
+          "domainColor": "#000000",
+          "labelColor": "#000000",
+          "tickColor": "#000000",
+          "gridColor": "black",
+          "titleColor": "#000000"
+        }
+      },
+      "color": {
+        "datum": {"repeat": "layer"},
+        "title": "Year",
+        "scale": {
+        "scheme": "tableau20"},
+        "legend": {
+          "orient": "right",
+          "fillColor": "#ffffff",
+          "labelColor": "#000000"
+        }
+      },
+      "yOffset": {"datum": {"repeat": "layer"}},
+      "tooltip": [
+        {"field": "gambling_activity", "type": "nominal", "title": "Type of Gambling"},
+        {
+          "field": "Year to Sept 2018",
+          "type": "quantitative",
+          "title": "Year to Sept 18 (%)"
+        },
+        {
+          "field": "Year to Sept 2019",
+          "type": "quantitative",
+          "title": "Year to Sept 19 (%)"
+        },
+                  {
+          "field": "Year to Sept 2020",
+          "type": "quantitative",
+          "title": "Year to Sept 20 (%)"
+        },
+                  {
+          "field": "Year to Sept 2021",
+          "type": "quantitative",
+          "title": "Year to Sept 21 (%)"
+        },
+                  {
+          "field": "Year to Sept 2022",
+          "type": "quantitative",
+          "title": "Year to Sept 22 (%)"
+        }
+      ]
+    }
+  }
+}

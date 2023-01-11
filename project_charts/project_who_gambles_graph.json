@@ -1,0 +1,57 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 550,
+  "height": 410,
+  "config": {
+    "background": "white",
+    "view": {"stroke": "transparent"},
+    "padding": {"top": 7}
+  },
+  "title": {
+    "text": "Who are the Problem Gamblers?",
+    "subtitle": "2019 and 2020 Survey - Source: YouGov",
+    "fontSize": 15,
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 11,
+    "anchor": "middle",
+    "color": "#000000",
+    "subtitleColor": "#000000"
+  },
+  "background": "rgb(251, 245, 233)",
+  "params": [
+    {
+      "name": "yearSelector",
+      "value": 2020,
+      "bind": {
+        "input": "range",
+        "min": 2019,
+        "max": 2020,
+        "step": 1,
+        "name": "Select the Year:"
+      }
+    }
+  ],
+    "transform": [
+    {"filter": "datum.Year == yearSelector"}],
+
+
+  "data": {"url": "https://raw.githubusercontent.com/MorganDaviesEcon/MorganDaviesEcon.github.io/main/project_who_gambles.csv"},
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "aggregate": "sum",
+      "field": "percentage",
+      "scale": {
+        "domain": [0, 100]
+      }
+    },
+    "y": {"field": "Age"},
+    "color": {"field": "Type of Gambler"},
+    "tooltip": [
+      {"field": "Type of Gambler", "type": "nominal", "title": "Type of Gambler"},
+      {"field": "percentage", "title": "Percentage of demographic (%)"},
+      {"field": "Age", "title": "Age"}
+    ]
+  }
+  
+}
