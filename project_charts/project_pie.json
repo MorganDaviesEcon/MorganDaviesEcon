@@ -1,0 +1,44 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+      "title": {
+      "text": "The Costs of Gambling",
+      "subtitle": [
+        "Values in £ millions. Source: Public Health England",
+        ""
+      ],
+      "subtitleFontStyle": "italic",
+      "subtitleFontSize": 12.5,
+      "fontSize": 15.5,
+      "anchor": "middle",
+      "color": "black"
+    },
+    "background": "rgb(251, 245, 233)",
+    "height":200,
+    "width":200,
+    "data": {
+      "url": "https://raw.githubusercontent.com/MorganDaviesEcon/MorganDaviesEcon.github.io/main/donut_chart.csv"
+    },
+  "layer": [
+    {
+      "mark": {"type": "arc", "innerRadius": 50},
+      "encoding": {
+        "theta": {"field": "All costs (£ millions)", "type": "quantitative", "sort": {"field": "All costs (£ millions)", "order": "descending"}},
+        "color": {"field": "Type of harm", "type": "nominal","scale": {
+          "scheme": "tableau10"
+      }}
+      }
+    },
+    {
+      "mark": {
+        "type": "text", 
+        "align": "center", 
+        "baseline": "middle",
+        "fontSize":16,
+        "font":"Arial"},
+      "encoding": {
+        "text": {"value":"2532.2 Million"}
+      }
+    }
+  ]
+  }
+  
