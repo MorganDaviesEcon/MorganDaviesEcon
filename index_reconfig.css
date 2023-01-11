@@ -1,0 +1,190 @@
+/* CSS file used for the portfolio page  */
+
+
+/* Import a font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+
+body{
+    background-color: rgb(251, 245, 233);
+    max-width: 100%;
+    margin: auto;
+}
+
+/* Appearance of tags  */
+h1{
+    color:rgb(0, 0, 0);
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+h2{
+    color: blue;
+    font-family: 'Roboto', sans-serif;
+}
+    
+h3{
+    color: blueviolet;
+    font-family: 'Roboto', sans-serif;
+}
+
+p{
+    color: #a8897b;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+
+
+}
+
+/* Appearance of hyperlinks  */
+a:link {
+    color: #001eff;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  a:visited {
+    color: #ffffff;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  a:hover {
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    text-decoration: none;
+  }
+  a:active {
+    color: pink;
+    background-color: transparent;
+    text-decoration: none;
+  }
+
+/* Navigation bar  */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: relative;
+    top: 0;
+    width: 100;
+    text-decoration: none;
+}
+  
+li {
+    float: right;
+    text-decoration: none;
+}
+  
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+  
+li a:hover:not(.active) {
+    background-color: #111;
+}
+  
+.active {
+    background-color: #247e5d;
+}
+
+/* Appearance of divs  */
+.myWeek2{
+    margin: auto;
+    background-color: rgb(138, 184, 204);
+
+      
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 0px;
+    border-color: rgb(100, 100, 100);
+    margin-top: 400px
+}
+
+/* Appearance of title bar  */
+/* <div class="title">  */
+.title-bar{
+    position: absolute;
+    top:0%;
+    margin-left: auto;
+    padding:2px;
+    width:100vw;
+    margin: 0;
+    background-color: none; /*#FFFAF0 */
+    height: auto;
+    line-height: 0;
+    margin-top:40px;;
+    }
+  
+  .title-bar h1{ 
+    font-size: 65px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 50px;
+    }
+  
+  .title-bar p{ 
+      font-size: 20px;
+      font-weight: bold;
+      margin: 50px;
+      color: #a8897b;
+      white-space: nowrap;
+  }
+
+
+
+.myTitle{
+    margin: auto;
+    max-width: 600px;
+    background-color: rgb(165, 226, 240);
+
+      
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 1000px;
+    border-color: rgb(100,100,100);
+    
+}
+
+/* Set the apperance of charts */
+.chart { 
+    width: auto;
+    height: auto;
+    margin: 10px;
+    padding: 5px;
+    background-color: rgb(251, 245, 233);
+    border: #908e8e solid 5px;
+    border-radius: 10px;
+    font-family: Inter,sans-serif;
+    font-size: 10pxp;
+}
+
+.grid-container {
+    display: grid;
+    gap: 200px;
+    grid-template-columns: 150px 150px 150px;
+  }
+
+.grid-container > div {
+    padding: 10px
+}
+
+.container{
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: center;
+   text-align: left;
+} 
+
+.main-body{
+    margin-top:200px;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+	
+}
