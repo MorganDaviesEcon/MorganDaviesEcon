@@ -17,7 +17,7 @@
   },
   "background": "rgb(251, 245, 233)",
   "height": 70,
-  "width": 70,
+  "width": 50,
   "mark": {"type": "line", "strokeWidth": 1.2},
   "encoding": {
     "x": {

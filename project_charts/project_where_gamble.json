@@ -20,7 +20,7 @@
     "padding": {"top": 10},
     "background": "rgb(251, 245, 233)",
     "view": {
-      "width": 260,
+      "width": 200,
       "height": 250,
     "stroke": "transparent"
   }
