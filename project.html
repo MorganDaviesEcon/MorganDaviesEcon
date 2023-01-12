@@ -54,16 +54,22 @@
         <p>The UK has a thriving gambling industry, with 755 facilities and a Gross Gambling Revenue of nearly £10 billion in 2021-2022 (IGB 2022), making it the second largest gambling markets in the world in terms of facilities. This is accompanied by a growing concern that the UK may have a gambling problem. This project will investigate this issue by examining the economic benefits and costs of gambling, to provide a clear picture of the state of gambling in the UK.</p>
         <br>
         <div class="chart" id="Chart1" ></div>
-        <br><br><br>
+        <br>
         <p>I <a href="https://colab.research.google.com/drive/1frwGAIBJJSaklhtJLaKr2_EbdI91I7gN?usp=sharing">scraped</a> data on the number of gaming facilities in each country to help show the UK as a stand out figure on the map. The main challenge of this was matching up the names of the countries and dropping values for which the countries did not match up (e.g. coupling China and Macau into one), losing data in the process. </p>
         <br><div class="chart" id="Chart2" ></div>
-        <br><br><br><p>I used <a href="https://colab.research.google.com/drive/1TbziczhsOYF3l6Gi4RV3em7bsMwstWyl?usp=sharing">Python loops</a> to batch download stock price data for the top UK gambling from the Yahoo Finance API for easy replicability, as running the code will generate an up-to-date year overview of the betting market performance. The chart highlights the stability of the industry, as even during high levels of inflation and cost of living issues, it has only experienced a mild downturn.</p>
+        <br>
+        <br>
+        <p>I used <a href="https://colab.research.google.com/drive/1TbziczhsOYF3l6Gi4RV3em7bsMwstWyl?usp=sharing">Python loops</a> to batch download stock price data for the top UK gambling from the Yahoo Finance API for easy replicability, as running the code will generate an up-to-date year overview of the betting market performance. The chart highlights the stability of the industry, as even during high levels of inflation and cost of living issues, it has only experienced a mild downturn.</p>
         
         <hr style="color: black; border-style: solid; background-color: black;">
         <h4>Demographics and Choices</h4>
         <br><p>To better understand which type of person is most likely to gamble, I <a href="https://colab.research.google.com/drive/11Lr-mGI9Vl0fd47Rfxk-FlKwALONIRgs?usp=sharing">Scraped</a> data from the YouGov Annual Treatment and Support Survey PDF.</p>
         <div class="chart" id="Chart3"></div>
-        <br><br><br><br><p>The chart highlights an interesting aspect of the problem of gambling among young people, indicating they are more likely to be problem gamblers despite being less likely to gamble overall. From an economic perspective, problem gambling can have negative effects on both the individual and society, such as lost productivity, increased healthcare expenses and long-term financial consequences. The reasons for the higher problem gambling rate among younger people and potential policy measures to mitigate it is worth further examination. This chart serves as a reminder of the need to consider the economic costs and benefits of gambling and to take proactive steps to prevent problem gambling among all ages, especially the young population. Cleaning this data was particularly time consuming, with it needing several drop functions to get rid of irrelevant cells in the data frame. </p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <p>The chart highlights an interesting aspect of the problem of gambling among young people, indicating they are more likely to be problem gamblers despite being less likely to gamble overall. From an economic perspective, problem gambling can have negative effects on both the individual and society, such as lost productivity, increased healthcare expenses and long-term financial consequences. The reasons for the higher problem gambling rate among younger people and potential policy measures to mitigate it is worth further examination. This chart serves as a reminder of the need to consider the economic costs and benefits of gambling and to take proactive steps to prevent problem gambling among all ages, especially the young population. Cleaning this data was particularly time consuming, with it needing several drop functions to get rid of irrelevant cells in the data frame. </p>
         <div class="chart" id="Chart4"></div>
         <br><br>
         <p>This data was accessed through a gov.uk csv download and cleaned using <a href="https://colab.research.google.com/drive/1ijHdsn0B2sIS6i9WjlHYw95ESowWkxRq?usp=sharing">Pandas.</a> Because of the reputable source, the formatting is the same each year, allowing for replicability once the annual report is published using loops.</p>
@@ -72,12 +78,16 @@
         <h4>Are There Benefits to Legalised Gambling?</h4>
         <br><p>Tax revenue data was downloaded via csv and cleaned using <a href="https://colab.research.google.com/drive/1O1GCUgxguNfrrJf16P3eFYT388GI6qVk?usp=sharing">Pandas.</p>
         <br><div class="chart" id="Chart5" ></div>
-        <br><br><br>
+        <br>
+        <br>
+        <br>
         <p>The chart shows that although different forms of gambling have been providing tax revenue for the government over the last 3 decades, it is important that overall tax receipts have shown steady growth with a current revenue of £3 billion each year.</p>
         <br><br>
         <p>This data was accessed through a gov.uk csv download and cleaned using <a href="https://colab.research.google.com/drive/1ijHdsn0B2sIS6i9WjlHYw95ESowWkxRq?usp=sharing">Pandas.</a> Because of the reputable source, the formatting is the same each year, allowing for replicability once the annual report is published using loops.</p>
         <div class="chart" id="Chart6" ></div>
-        <br><br><br>
+        <br>
+        <br>
+        <br>
         <p>As well as increasing tax revenues, the gambling market provides jobs for people in deprived areas. The R2 value of 0.41 suggests a positive correlation between deprived areas and gambling industry employment. However, an argument could be made that gambling companies seek to capitalise on the poorest of individuals when deciding where to set up business. When cleaning the data, I chose to <a href="https://colab.research.google.com/drive/1FtYPoE-wh01NNtg9W1At1EVxdUIcbQTj?usp=sharing">exclude</a> Stoke-on-Trent and Three Rivers as these have key headquarters for top companies in the areas and would skew the results.</p>
 
         <hr style="color: black; border-style: solid; background-color: black;">
