@@ -1,0 +1,112 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/MorganDaviesEcon/MorganDaviesEcon.github.io/main/NEW2_project_regression.csv"
+  },
+  "title": {
+    "text": "Figure 6: Index of Multiple Deprivation vs. Employment in the Gambling Industry",
+    "subtitle": [
+      "Excluding Stoke-on-Trent & Three Rivers",
+      "Source: ONS BRES, MHCLG"
+    ],
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 11.2,
+    "fontSize": 14,
+    "anchor": "middle",
+    "color": "black"
+  },
+  "background": "rgb(251, 245, 233)",
+  "width": 450,
+  "height": 400,
+  "transform": [{"filter": "datum.average_rank>=MinIMDScore"}],
+  "params": [
+      {
+      "name": "MinIMDScore",
+      "value": 0,
+      "bind": {"input": "range", "min": 0, "max": 26000, "step": 1000}
+    }
+  ],
+  "config": {
+    "padding": {"top": 10, "bottom": 8, "left": 2, "right": 5},
+    "background": "white",
+    "view": {"stroke": "transparent"}
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "point",
+        "color": "mediumaquamarine",
+        "filled": true,
+        "opacity": 0.9,
+        "size": 50,
+        "tooltip": true
+      },
+      "encoding": {
+        "x": {
+          "field": "average_rank",
+          "type": "quantitative",
+          "title": "IMD Rank (2019) Higher = More Deprived",
+          "axis": {"titleFontSize": 11, "tickMinStep": 1}
+        },
+        "y": {
+          "field": "percentage",
+          "type": "quantitative",
+          "title": "% Employed in Gambling Industry (2019)",
+          "axis": {"titleFontSize": 11.4},
+      "scale": {"domain": [0, 1.4]}
+        },
+        "tooltip": [
+          {"field": "average_rank", "type": "nominal", "title": "IMD Rank"},
+          {"field": "percentage", "type": "nominal", "title": "% Employed in Gambling Industry"},
+          {
+            "field": "local_authority",
+            "type": "nominal",
+            "title": "Local Authority"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {"type": "line", "color": "crimson", "interpolate": "linear"},
+      "transform": [
+        {
+          "regression": "average_rank",
+          "on": "percentage"
+        }
+      ],
+      "encoding": {
+        "x": {
+          "field": "average_rank",
+          "type": "quantitative",
+          "axis": {"grid": true, "labelFontSize": 11.2}
+        },
+        "y": {
+          "field": "percentage",
+          "type": "quantitative",
+          "axis": {"grid": true, "labelFontSize": 11.2}
+        }
+      }
+    },
+    {
+      "transform": [
+        {"filter": "datum.average_rank>=MinIMDScore"},
+        {
+          "regression": "average_rank",
+          "on": "percentage",
+          "params": true
+        },
+        {"calculate": "'R²: '+format(datum.rSquared, '.2f')", "as": "R2"}
+      ],
+      "mark": {
+        "type": "text",
+        "color": "crimson",
+        "x":"width",
+        "y":-10,
+        "align": "right",
+        "fontSize": 15,
+        "fontWeight": "bold"
+      },
+      "encoding": {"text": {"type": "nominal", "field": "R2"}}
+    }
+  ]
+}

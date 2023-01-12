@@ -1,0 +1,83 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Figure 2: Stock Prices of Top UK Gambling Stocks",
+    "subtitle": [
+      "Price at close (£) over past year. Source: Yahoo Finance"
+      ],
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "#000000",
+    "subtitleColor": "#000000"
+  },
+  "config": {"background": "#ffffff", "view": {"stroke": "transparent"}},
+  "data": {
+    "url": "https://raw.githubusercontent.com/MorganDaviesEcon/MorganDaviesEcon.github.io/main/uk_gambling_stocks_new1.csv"
+  },
+  "background": "rgb(251, 245, 233)",
+  "width": 290,
+  "height": 300,
+  "encoding": {
+    "x": {
+      "field": "Date",
+      "type": "temporal",
+      "title": null,
+      "axis": {
+        "grid": false,
+        "domainColor": "#white",
+        "labelColor": "#000000",
+        "tickColor": "#000000",
+        "gridColor": "white"
+      }
+    },
+    "y": {
+      "field": "Close",
+      "type": "quantitative",
+      "title": "Closing Price (£)",
+      "axis": {
+        "grid": false,
+        "domainColor": "#000000",
+        "labelColor": "#000000",
+        "tickColor": "#000000",
+        "gridColor": "black",
+        "titleColor": "#000000"
+      }
+    },
+    "color": {
+      "condition": {
+        "param": "hover",
+        "field": "Name",
+        "type": "nominal",
+        "legend": {
+          "orient": "right",
+          "title":"Stock"
+        }
+      },
+      "value": "black"
+    },
+    "opacity": {"condition": {"param": "hover", "value": 1}, "value": 0.2},
+    "tooltip": [
+      {"field": "Name", "title": "Stock"},
+      {
+        "field": "Close",
+        "title": "Closing Price (£)",
+        "type": "quantitative"
+      },
+      {"field": "Date", "type": "temporal"}
+    ]
+  },
+  "layer": [
+    {
+      "params": [
+        {
+          "name": "hover",
+          "value": [{"Name": "PDYPF"}],
+          "select": {"type": "point", "fields": ["Name"], "on": "mouseover"}
+        }
+      ],
+      "mark": {"type": "line", "strokeWidth": 8, "stroke": "transparent"}
+    },
+    {"mark": "line"}
+  ]
+}

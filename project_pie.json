@@ -1,0 +1,62 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+    "text": "Figure 8: The Costs of Harm Associated with Gambling",
+    "subtitle": [
+      "Values in £ millions. Source: Public Health England",
+      ""
+    ],
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 12.5,
+    "fontSize": 15.5,
+    "anchor": "middle",
+    "color": "black"
+  },
+  "background": "rgb(251, 245, 233)",
+  "height":400,
+  "width":450,
+  "data": {
+    "url": "https://raw.githubusercontent.com/MorganDaviesEcon/MorganDaviesEcon.github.io/main/donut_chart.csv"
+  },
+"layer": [
+  {
+    "mark": {"type": "arc", "innerRadius": 90},
+    "encoding": {
+      "theta": {"field": "All costs (£ millions)", "type": "quantitative", "sort": {"field": "All costs (£ millions)", "order": "descending"}},
+  "color": {"field": "Type of harm", "type": "nominal","scale": {
+    "scheme": "tableau10"
+  }},
+  "tooltip": [
+      {
+            "field": "Type of harm", 
+            "type": "nominal"
+      },
+      {
+          "field": "All costs (£ millions)", 
+          "type": "quantitative"
+      },
+      {
+          "field": "Direct costs to government (£ millions)", 
+          "type": "quantitative"
+      },
+      {
+          "field": "Intangible costs to wider society (£ millions)", 
+          "type": "quantitative"
+      }
+  ]
+}
+
+  },
+  {
+    "mark": {
+      "type": "text", 
+      "align": "center", 
+      "baseline": "middle",
+      "fontSize":16,
+      "font":"Arial"},
+    "encoding": {
+      "text": {"value":"£2.53 Billion"}
+    }
+  }
+]
+}

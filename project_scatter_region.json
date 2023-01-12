@@ -1,0 +1,83 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Figure 7: Gambling Businesses and Unemployment Rate",
+    "subtitle": [
+      "Gambling Businesses per 100,000 and Unemployment Rate by Region",
+      "Source: Nomis - Official Census and LMS"
+    ],
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "black"
+  },
+  "background": "rgb(251, 245, 233)",
+  "height": 400,
+  "width": 450,
+  "data": {
+    "url": "https://raw.githubusercontent.com/MorganDaviesEcon/MorganDaviesEcon.github.io/main/v2_Better_scatter_plot.csv"
+  },
+"selection": {
+    "grid": {
+      "type": "interval",
+      "bind": "scales",
+      "on": "[mousedown, window:mouseup] > window:mousemove!",
+      "translate": "[mousedown, window:mouseup] > window:mousemove!",
+      "zoom": "wheel!",
+      "resolve": "global"
+    },
+    "Type": {
+      "type": "single",
+      "fields": ["region"],
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "North East",
+          "North West",
+          "Yorkshire and The Humber",
+          "East Midlands",
+          "West Midlands",
+          "East",
+          "London",
+          "South East",
+          "South West",
+          "Wales",
+          "Scotland",
+          "Northern Ireland"
+        ],
+        "name": "Pick a Region:"
+      }
+    }
+  },
+  "transform": [{"filter": {"selection": "Type"}}],
+  "mark": {"type": "point", "opacity": 1, "size": 100},
+  "encoding": {
+    "x": {
+      "field": "count_per_100000",
+      "type": "quantitative",
+      "scale": {"domain": [0, 7]},
+      "title": "Gambling Businesses per 100,000"
+    },
+    "y": {
+      "field": "rate",
+      "type": "quantitative",
+      "title": "Unemployment rate (%)"
+    },
+    "color": {
+      "field": "region",
+      "type": "nominal",
+      "title": "Region",
+      "scale": {"scheme": "tableau20"}
+    },
+    "tooltip": [
+      {"field": "region", "type": "nominal", "title": "Region"},
+      {
+        "field": "count_per_1000",
+        "type": "quantitative",
+        "title": "Gambling Businesses per 1000:"
+      },
+      {"field": "year", "type": "quantitative", "title": "Year"}
+    ]
+  }
+}
