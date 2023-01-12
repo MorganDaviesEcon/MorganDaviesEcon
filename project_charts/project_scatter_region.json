@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Gambling Businesses and Unemployment Rate",
+    "text": "Figure 7: Gambling Businesses and Unemployment Rate",
     "subtitle": [
       "Gambling Businesses per 100,000 and Unemployment Rate by Region",
       "Source: Nomis - Official Census and LMS"
@@ -13,7 +13,7 @@
   },
   "background": "rgb(251, 245, 233)",
   "height": 400,
-  "width": 500,
+  "width": 450,
   "data": {
     "url": "https://raw.githubusercontent.com/MorganDaviesEcon/MorganDaviesEcon.github.io/main/v2_Better_scatter_plot.csv"
   },

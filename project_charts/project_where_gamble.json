@@ -4,9 +4,8 @@
     "url": "https://raw.githubusercontent.com/MorganDaviesEcon/MorganDaviesEcon.github.io/main/NEW_project_gambling_activities_test.csv"
   },
   "title": {
-    "text": "Where are People Gambling?",
+    "text": "Figure 4: Percentage of Individuals who have Gambled in the last 4 Weeks by Activity",
     "subtitle": [
-      "Percent of Individuals who Gamble Within the Last 4 Weeks by Activity",
       "Source: Gambling Comission",
       ""
     ],
@@ -17,12 +16,14 @@
     "color": "#000000",
     "subtitleColor": "#000000"
   },
-  "height": 350,
-  "width": 290,
   "config": {
     "padding": {"top": 10},
     "background": "rgb(251, 245, 233)",
-    "view": {"stroke": "transparent"}
+    "view": {
+      "width": 440,
+      "height": 410,
+    "stroke": "transparent"
+  }
   },
   "repeat": {"layer": ["Year to Sept 2018","Year to Sept 2019","Year to Sept 2020","Year to Sept 2021","Year to Sept 2022"]},
   "spec": {
@@ -55,7 +56,7 @@
         "scheme": "tableau20"},
         "legend": {
           "orient": "right",
-          "fillColor": "#ffffff",
+          "fillColor": "rgb(251, 245, 233)",
           "labelColor": "#000000"
         }
       },

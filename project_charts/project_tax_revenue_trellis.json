@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Tax Revenues for Gambling Activities",
+    "text": "Figure 5: Tax Revenues for Gambling Activities",
     "subtitle": [
       "Receipts in £ thousands. Source: Gov.UK",
       ""
@@ -16,8 +16,8 @@
     "url": "https://raw.githubusercontent.com/MorganDaviesEcon/MorganDaviesEcon.github.io/main/NEW1_year_gambling_tax_revenue_TIDY.csv"
   },
   "background": "rgb(251, 245, 233)",
-  "height": 112,
-  "width": 112,
+  "height": 106,
+  "width": 106,
   "mark": {"type": "line", "strokeWidth": 1.2},
   "encoding": {
     "x": {

@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 550,
+  "width": 490,
   "height": 410,
   "config": {
     "background": "white",
@@ -8,7 +8,7 @@
     "padding": {"top": 7}
   },
   "title": {
-    "text": "Who are the Problem Gamblers?",
+    "text": "Figure 3: Chart Showing Three Age Ranges and their Percentage of Gambling Types",
     "subtitle": "2019 and 2020 Survey - Source: YouGov",
     "fontSize": 15,
     "subtitleFontStyle": "italic",

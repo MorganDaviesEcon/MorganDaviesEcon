@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Stock Prices of Top UK Gambling Stocks",
+    "text": "Figure 2: Stock Prices of Top UK Gambling Stocks",
     "subtitle": [
       "Price at close (£) over past year. Source: Yahoo Finance"
       ],

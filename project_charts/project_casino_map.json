@@ -3,7 +3,7 @@
   "description": "",
   "title": {
     "text": [
-      "Number of Gaming Facilities in Each Country"
+      "Figure 1: Number of Gaming Facilities in Each Country"
     ],
     "subtitle": ["Worldwide Casinos, Horse Tracks and Other Gaming Facilities",
     "Source: Casino City"],
@@ -51,7 +51,7 @@
 
     "tooltip": [
       {"field": "properties.name", "type": "nominal", "title": "Country"},
-      {"field": "Number", "type": "quantitative", "title": "Number of Casinos"}
+      {"field": "Number", "type": "quantitative", "title": "Number of Facilities"}
     ]
   }
   

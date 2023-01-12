@@ -4,7 +4,7 @@
     "url": "https://raw.githubusercontent.com/MorganDaviesEcon/MorganDaviesEcon.github.io/main/NEW2_project_regression.csv"
   },
   "title": {
-    "text": "Index of Multiple Deprivation vs. Employment in the Gambling Industry",
+    "text": "Figure 6: Index of Multiple Deprivation vs. Employment in the Gambling Industry",
     "subtitle": [
       "Excluding Stoke-on-Trent & Three Rivers",
       "Source: ONS BRES, MHCLG"
@@ -16,8 +16,8 @@
     "color": "black"
   },
   "background": "rgb(251, 245, 233)",
-  "width": 350,
-  "height": 330,
+  "width": 450,
+  "height": 400,
   "transform": [{"filter": "datum.average_rank>=MinIMDScore"}],
   "params": [
       {
