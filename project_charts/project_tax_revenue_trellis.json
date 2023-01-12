@@ -16,8 +16,8 @@
     "url": "https://raw.githubusercontent.com/MorganDaviesEcon/MorganDaviesEcon.github.io/main/NEW1_year_gambling_tax_revenue_TIDY.csv"
   },
   "background": "rgb(251, 245, 233)",
-  "height": 106,
-  "width": 106,
+  "height": 70,
+  "width": 70,
   "mark": {"type": "line", "strokeWidth": 1.2},
   "encoding": {
     "x": {
