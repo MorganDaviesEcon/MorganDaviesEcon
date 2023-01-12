@@ -1,0 +1,260 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=0.2">
+
+<!-- Vega Embed -->
+<script src="https://cdn.jsdelivr.net/npm/vega@5.21.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@5.2.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.20.2"></script>
+
+<!-- ////////// HEAD //////////////  -->
+
+<head>    
+    <!-- Title for the page in tab -->
+    <title>Data Science Project</title>
+
+    <!--CSS Style Sheet-->
+    <link rel="stylesheet" href="index_reconfig.css">
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+
+</head>
+
+<!-- ////////// HEAD //////////////  -->
+
+
+<!-- //////////// START BODY /////////////  -->
+
+<body>
+        <!-- navigation bar  -->
+        <ul>
+            <li style="float:right"><a href="https://github.com/MorganDaviesEcon/MorganDaviesEcon.github.io">Github</a></li>
+            <li style="float:right"><a href="project.html">Project</a></li>
+            <li style="float:right"><a href="portfolio.html">Portfolio</a></li>
+            <li style="float:right"><a href="index.html">Home</a></li>
+        </ul>
+
+
+
+    <div class="main-body"> 
+
+
+         
+    <!-- Portfolo tasks -->
+    <h1>Portfolio</h1>
+
+
+    <h1>Task 1</h1>
+
+    <h3>Setting up web page, and embedding two charts</h3>
+    
+    <h3>Football</h3>
+    <p>The first chart tracks cumulative goals scored for home and away teams in a premier league season</p>
+
+    <div class="container">
+        <div class="chart" id="Chart1"></div> 
+        <div class="chart" id="Chart2"></div>
+    </div> 
+
+    <h3>Bitcoin</h3>
+    <p>My second chart looks at the daily price of bitcoin</p>
+
+    <div class="myWeek1">
+        <h1>Task 2</h1>
+
+        <h3>Two charts, replicating one from the Financial Times and one that is my own</h3>
+        
+        <div class="chart" id="Chart3"> </div>
+
+        <p>Cleaning the data to represent IMF lending as a percentage of global GDP</p>
+
+        <div class="chart" id="Chart4"> </div>
+
+        <p>The most lending relative to global GDP at the time was in 1984, indicating that this would have been 'riskiest' year to lend.</p>
+
+    </div>
+    <div class="myWeek1">
+        <h1>Task 3</h1>
+
+        <h3>Python Work</h3>
+        
+        <h3>Two charts: inline data objects and visual encodings</h3>
+        <p>The first chart uses data from world bank (link to python cleaning <a href="https://colab.research.google.com/drive/1uXNjUBkN5Yk8k1VWfZtmQlcYrCs1Sa-1?usp=sharing">here</a>) to show how countries have progressed in the quest for clean drinking water for all. The graph is a barchart with a built-in slider to look at each year individualy.</p>
+        <div class="chart" id="Chart5"></div>
+        <p>The next graph uses the same data from the World Bank but displays it as multi series line chart</p>
+        <div class="chart" id="Chart16"></div>
+        <p>I chose this graph because it better demonstrates how each country changes year on year at a glance</p>
+
+    </div> 
+    <div class="myWeek1">
+        <h1>Task 4</h1>
+
+        <h3>Data Scraping</h3>
+    
+        <p>This chart was scraped from wikipedia using read_html in Python. the link to the python notebook can be found <a href="https://colab.research.google.com/drive/1C5Z_kBV90-Hi2EQKQyjE-L5k29xYokRw?usp=sharing">here</a></p>
+        <div class="chart" id="Chart6"></div>
+        
+        <p>I chose wikipedia for the ease of finding the table using inspect element, as this was my first scraper.</p>
+    </div> 
+    <div class="myWeek1">
+        <h1>Task 5</h1>
+
+        <h3>Python Loops</h3>
+        
+        <h3></h3>
+        <p>These 9 charts were batch downloaded using this <a href="https://colab.research.google.com/drive/1Q3aPb1kxex_-W8pPYf2h9X9hS_FrsmkJ?usp=sharing">python notebook</a> using the ONS API</p>
+        
+        <div class="container">
+
+            <div class="grid-item"><div class="chart" id="Chart7"></div></div>
+            <div class="grid-item"><div class="chart" id="Chart8"></div></div>
+            <div class="grid-item"><div class="chart" id="Chart9"></div></div>
+            <div class="grid-item"><div class="chart" id="Chart10"></div></div>
+            <div class="grid-item"><div class="chart" id="Chart11"></div></div>
+            <div class="grid-item"><div class="chart" id="Chart12"></div></div>
+            <div class="grid-item"><div class="chart" id="Chart13"></div></div>
+            <div class="grid-item"><div class="chart" id="Chart14"></div></div>
+            <div class="grid-item"><div class="chart" id="Chart15"></div></div>
+
+        </div>
+
+
+    </div> 
+    <div class="myWeek1">
+        <h1>Task 6</h1>
+
+        <h3>Maps</h3>
+        
+        <p>The first chart is a base map of Northern Ireland, with a tooltip that is used to display the constituencies. (python cleaning <a href="https://colab.research.google.com/drive/1tfI-Iail0XxZ_4w7NYOg68l7whhooNfR?usp=sharing">here</a>)</p>
+        <div class="chart" id="Chart17"></div>
+
+        <p>Map with colour</p>
+        <div class="chart" id="Chart18"></div>
+        
+        <p>This map shows the amount of electorate votes each constituency had on Sep 2021 by using colour</p>
+
+
+    </div> 
+
+    <div class="myWeek1">
+        <h1>Task 7</h1>
+
+        <h3>Festival of Economics - produce two charts</h3>
+
+        <p>In the Prices & Wages talk, Vicky Pryce said that UK situation of labour shortages is most similar to the US, to demonstrate this i compare the ratio of unemployed to vacancies over time for both countries (data downloaded using the <a href="https://colab.research.google.com/drive/1tZq9snHOC7Z7Qr4Xbag_9nXofytcdnzd?usp=sharing">FRED API</a> and combined with <a href="https://colab.research.google.com/drive/1oS-Wk5IeGhVqZ3IUeGBU_DORzEfuU-t2?usp=sharing">Python</a>) </p>
+        
+        <div class="chart" id="Chart19"></div>
+        <div class="chart" id="Chart20"></div>
+
+        <p>From the two charts, it is clear to see that they both follow similar patterns in the labour market</p>
+
+    </div> 
+
+    <div class="myweek1">
+        <h1>Task 8</h1>
+
+        <h3>Advanced Charts - produce two charts that use advanced analytics (regression python notebook <a href="https://colab.research.google.com/drive/1l-YqqaHuuLhvlmDQwIssAs_3ncXvYQoY?usp=sharing">here</a>)</h3>
+
+        <div class="chart" id="Chart21"></div>
+        <div class="chart" id="Chart22"></div>
+
+    </div>
+
+    <div class="myweek1">
+        <h1>Task 9</h1>
+
+        <h3>Machine Learning - Supervised</h3>
+
+        <p>Hypothesis: Can Breast Cancer be successfully predicted using machine learning?</p>
+
+        <img src="W10cancer_knn.png" alt="Trulli" width="500" height="333">
+
+        <p>From the matplot graph we can see that successfully diagnoses most extreme cases, but has difficulty distinguishing cases in the average mean texture and radius.<a href="https://colab.research.google.com/drive/1vJGsBxzKwEkYntDK75dc-mSSgGd8vMWR?usp=sharing">Python Notebook</a></p>
+    
+
+    </div>
+
+    <div class="myweek1">
+        <h1>Task 10</h1>
+
+        <h3>Machine Learning - Unsupervised </h3>
+
+        <p>Hypothesis: Can clustering be used to group together wines by their characteristics?</p>
+
+        <img src="W10wine_true_learned.png" alt="Trulli" width="700" height="333">
+        
+        <img src="W10wine_confustionmatrix.png" alt="Trulli" width="500" height="333">        
+
+        <p>Results: The results show good levels of clustring between one wine and the other two, but incorrectly classifies 2 wines as the wrong one regularly. <a href="https://colab.research.google.com/drive/1phBaYMxjoUrLfDPE5EOHGH9LCyVyjTdR?usp=sharing">Python Notebook</a></p>
+
+    </div>
+    
+
+</body>
+
+<!-- //////////// END BODY /////////////  -->
+
+<script>
+    //Define charts:
+    var myChart1 = "charts/chartfootball.json";
+    var myChart2 = "charts/chartcrypto.json";
+    var myChart3 = "charts/imfcredit.json";
+    var myChart4 = "charts/imfcreditcleaned.json";
+    var myChart5 = "charts/clean_water_bar.json";
+    var myChart6 = "charts/F1_top10.json";
+    var myChart7 = "charts/UK_Employment.json";
+    var myChart8 = "charts/UK_Unemployment.json";
+    var myChart9 = "charts/UK_Inactive.json";
+    var myChart10 = "charts/UK_Male_Emp.json";
+    var myChart11 = "charts/UK_Male_Unemp.json";
+    var myChart12 = "charts/UK_Male_Inactive.json";
+    var myChart13 = "charts/UK_Female_Emp.json";
+    var myChart14 = "charts/UK_Female_Unemp.json";
+    var myChart15 = "charts/UK_Female_Inactive.json";
+    var myChart16 = "charts/clean_water_line_v2.json";
+    var myChart17 = "charts/nor_ire_blank_map.json";
+    var myChart18 = "charts/NI_constituency_map.json";
+    var myChart19 = "charts/UK_labour_market_shortage.json";
+    var myChart20 = "charts/US_labour_market_shortage.json";
+    var myChart21 = "charts/GDPpc_HDI.json";
+    var myChart22 = "charts/msft_aapl_regression.json";
+
+
+
+
+    // Embed charts:
+    vegaEmbed('#Chart1', myChart1);
+    vegaEmbed('#Chart2', myChart2);
+    vegaEmbed('#Chart3', myChart3);
+    vegaEmbed('#Chart4', myChart4);
+    vegaEmbed('#Chart5', myChart5);
+    vegaEmbed('#Chart6', myChart6);
+    vegaEmbed('#Chart7', myChart7);
+    vegaEmbed('#Chart8', myChart8);
+    vegaEmbed('#Chart9', myChart9);
+    vegaEmbed('#Chart10', myChart10);
+    vegaEmbed('#Chart11', myChart11);
+    vegaEmbed('#Chart12', myChart12);
+    vegaEmbed('#Chart13', myChart13);
+    vegaEmbed('#Chart14', myChart14);
+    vegaEmbed('#Chart15', myChart15);
+    vegaEmbed('#Chart16', myChart16);
+    vegaEmbed('#Chart17', myChart17);
+    vegaEmbed('#Chart18', myChart18);
+    vegaEmbed('#Chart19', myChart19);
+    vegaEmbed('#Chart20', myChart20);
+    vegaEmbed('#Chart21', myChart21);
+    vegaEmbed('#Chart22', myChart22);
+  
+</script>
+
+</div>
+
+</html>

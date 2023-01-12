@@ -1,174 +1,153 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=0.7">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
 
-<!-- Vega Embed -->
-<script src="https://cdn.jsdelivr.net/npm/vega@5.21.0"></script>
-<script src="https://cdn.jsdelivr.net/npm/vega-lite@5.2.0"></script>
-<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.20.2"></script>
 
-<!-- ////////// HEAD //////////////  -->
-
-<head>    
-    <!-- Title for the page in tab -->
-    <title>Data Science Project</title>
-
-    <!--CSS Style Sheet-->
-    <link rel="stylesheet" href="index_reconfig.css">
-
-    <!-- favicon -->
+    <!--Favicon-->
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
     <link rel="manifest" href="favicon/site.webmanifest">
 
+    <!-- Title for the page -->
+    <title>MD Data Science</title>
+
+    <!-- Link to my style sheet used for project -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!--The next three lines allow the Vega embed-->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.21.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.2.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.20.2"></script>
 </head>
 
-<!-- ////////// HEAD //////////////  -->
 
-
-<!-- //////////// START BODY /////////////  -->
 
 <body>
-        <!-- navigation bar  -->
-        <ul>
-            <li style="float:right"><a href="https://github.com/MorganDaviesEcon/MorganDaviesEcon.github.io">Github</a></li>
-            <li style="float:right"><a href="project.html">Project</a></li>
-            <li style="float:right"><a href="portfolio.html">Portfolio</a></li>
-            <li style="float:right"><a href="index.html">Home</a></li>
-        </ul>
+    <!-- inspiration from Eric Kocharyan -->
+    <div class="TOP_NAV">
 
+        <a href="index.html">HOME</a>
+        <a  href="portfolio.html">PORTFOLIO</a>
+        <a class="active" href="project.html">PROJECT</a>
+        <a href="https://github.com/morgandaviesecon">GITHUB</a>
 
-
-    <div class="main-body"> 
-        <header> 
-            <div class="title-bar">
-                 <h1>Data Science</h1>
-                 <h1>Project</h1>
-                 <p>Morgan Davies - 1943933</p>
-           </div>
-         </header>
-
-         
-    <!-- Portfolo tasks -->
-    <br>
-    <hr style="color: black; border-style: solid; background-color: black;">
-    <h1>Does the UK Have a Gambling Problem?</h1>
-    <hr style="color: black; border-style: solid; background-color: black;">
-    <br>
-    <h3>The UK has a thriving gambling industry, with 755 facilities and a Gross Gambling Revenue of nearly £10 billion in 2021-2022 (IGB 2022), making it the second largest gambling markets in the world in terms of facilities. This is accompanied by a growing concern that the UK may have a gambling problem. This project will investigate this issue by examining the economic benefits and costs of gambling, to provide a clear picture of the state of gambling in the UK.</h3>
-    
-
-    <div class="chart" id="Chart21"></div> 
-    <h3>I <a href="https://colab.research.google.com/drive/1frwGAIBJJSaklhtJLaKr2_EbdI91I7gN?usp=sharing">scraped</a> data on the number of gaming facilities in each country to help show the UK as a stand out figure on the map. The main challenge of this was matching up the names of the countries and dropping values for which the countries did not match up (e.g. coupling China and Macau into one), losing data in the process. </h3>
-
-    <div class="myWeek1">
-    
-        <div class="chart" id="Chart22"></div>
-
-    </div> 
-    <h3>I used <a href="https://colab.research.google.com/drive/1TbziczhsOYF3l6Gi4RV3em7bsMwstWyl?usp=sharing">Python loops</a> to batch download stock price data for the top UK gambling from the Yahoo Finance API for easy replicability, as running the code will generate an up-to-date year overview of the betting market performance. The chart highlights the stability of the industry, as even during high levels of inflation and cost of living issues, it has only experienced a mild downturn. </h3>
-
-    <div class="myWeek1">
-        <hr style="color: black; border-style: solid; background-color: black;">
-        <h1>The Demographics that Gamble and what they Gamble on</h1>
-        <hr style="color: black; border-style: solid; background-color: black;">
-
-        <h3>To better understand which type of person is most likely to gamble, I scraped data from the YouGov Annual Treatment and Support Survey PDF using <a href="https://colab.research.google.com/drive/11Lr-mGI9Vl0fd47Rfxk-FlKwALONIRgs?usp=sharing">Python</a> .</h3>
-        <div class="chart" id="Chart23"> </div>
-        <h3>The chart highlights an interesting aspect of the problem of gambling among young people, indicating they are more likely to be problem gamblers despite being less likely to gamble overall. From an economic perspective, problem gambling can have negative effects on both the individual and society, such as lost productivity, increased healthcare expenses and long-term financial consequences. The reasons for the higher problem gambling rate among younger people and potential policy measures to mitigate it is worth further examination. This chart serves as a reminder of the need to consider the economic costs and benefits of gambling and to take proactive steps to prevent problem gambling among all ages, especially the young population. Cleaning this data was particularly time consuming, with it needing several drop functions to get rid of irrelevant cells in the data frame. </h3>
-
-        <div class="chart" id="Chart24"> </div>
-        <h3>This data was accessed through a gov.uk csv download and cleaned using <a href="https://colab.research.google.com/drive/1ijHdsn0B2sIS6i9WjlHYw95ESowWkxRq?usp=sharing">Pandas.</a> Because of the reputable source, the formatting is the same each year, allowing for replicability once the annual report is published using loops.</h3>
- 
     </div>
-    <div class="myWeek1">
+</section>
+
+
+
+<br>
+
+    <!-- Body Section  -->
+    <section class="BODY_container">    
+
+
+        <h3> Does the UK Have a Gambling Problem?</h3>
+        <p>Morgan Davies</p>
+        <br>
         <hr style="color: black; border-style: solid; background-color: black;">
-        <h1>Are There Benefits to Legalised Gambling?</h1>
+        <h4>Aim:</h4>
+        <p>The UK has a thriving gambling industry, with 755 facilities and a Gross Gambling Revenue of nearly £10 billion in 2021-2022 (IGB 2022), making it the second largest gambling markets in the world in terms of facilities. This is accompanied by a growing concern that the UK may have a gambling problem. This project will investigate this issue by examining the economic benefits and costs of gambling, to provide a clear picture of the state of gambling in the UK.</p>
+        <br>
+        <div class="chart" id="Chart1" ></div>
+        <br><br><br>
+        <p>I <a href="https://colab.research.google.com/drive/1frwGAIBJJSaklhtJLaKr2_EbdI91I7gN?usp=sharing">scraped</a> data on the number of gaming facilities in each country to help show the UK as a stand out figure on the map. The main challenge of this was matching up the names of the countries and dropping values for which the countries did not match up (e.g. coupling China and Macau into one), losing data in the process. </p>
+        <br><div class="chart" id="Chart2" ></div>
+        <br><br><br><p>I used <a href="https://colab.research.google.com/drive/1TbziczhsOYF3l6Gi4RV3em7bsMwstWyl?usp=sharing">Python loops</a> to batch download stock price data for the top UK gambling from the Yahoo Finance API for easy replicability, as running the code will generate an up-to-date year overview of the betting market performance. The chart highlights the stability of the industry, as even during high levels of inflation and cost of living issues, it has only experienced a mild downturn.</p>
+        
         <hr style="color: black; border-style: solid; background-color: black;">
-        <h3>Tax revenue data was downloaded via csv and cleaned using <a href="https://colab.research.google.com/drive/1O1GCUgxguNfrrJf16P3eFYT388GI6qVk?usp=sharing">Pandas.</a></h3>
-        <div class="chart" id="Chart25"></div>
-        <h3>The chart shows that although different forms of gambling have been providing tax revenue for the government over the last 3 decades, it is important that overall tax receipts have shown steady growth with a current revenue of £3 billion each year.</h3>
-        <div class="chart" id="Chart26"></div>
-        <h3>As well as increasing tax revenues, the gambling market provides jobs for people in deprived areas. The R2 value of 0.41 suggests a positive correlation between deprived areas and gambling industry employment. However, an argument could be made that gambling companies seek to capitalise on the poorest of individuals when deciding where to set up business. When cleaning the data, I chose to exclude Stoke-on-Trent and Three Rivers as these have key headquarters for top companies in the areas and would thus skew the results.</h3>
+        <h4>Demographics and Choices</h4>
+        <br><p>To better understand which type of person is most likely to gamble, I <a href="https://colab.research.google.com/drive/11Lr-mGI9Vl0fd47Rfxk-FlKwALONIRgs?usp=sharing">Scraped</a> data from the YouGov Annual Treatment and Support Survey PDF.</p>
+        <div class="chart" id="Chart3"></div>
+        <br><br><br><br><p>The chart highlights an interesting aspect of the problem of gambling among young people, indicating they are more likely to be problem gamblers despite being less likely to gamble overall. From an economic perspective, problem gambling can have negative effects on both the individual and society, such as lost productivity, increased healthcare expenses and long-term financial consequences. The reasons for the higher problem gambling rate among younger people and potential policy measures to mitigate it is worth further examination. This chart serves as a reminder of the need to consider the economic costs and benefits of gambling and to take proactive steps to prevent problem gambling among all ages, especially the young population. Cleaning this data was particularly time consuming, with it needing several drop functions to get rid of irrelevant cells in the data frame. </p>
+        <div class="chart" id="Chart4"></div>
+        <br><br>
+        <p>This data was accessed through a gov.uk csv download and cleaned using <a href="https://colab.research.google.com/drive/1ijHdsn0B2sIS6i9WjlHYw95ESowWkxRq?usp=sharing">Pandas.</a> Because of the reputable source, the formatting is the same each year, allowing for replicability once the annual report is published using loops.</p>
 
-    </div> 
-    <div class="myWeek1">
         <hr style="color: black; border-style: solid; background-color: black;">
-        <h1>The Costs of Gambling</h1>
+        <h4>Are There Benefits to Legalised Gambling?</h4>
+        <br><p>Tax revenue data was downloaded via csv and cleaned using <a href="https://colab.research.google.com/drive/1O1GCUgxguNfrrJf16P3eFYT388GI6qVk?usp=sharing">Pandas.</p>
+        <br><div class="chart" id="Chart5" ></div>
+        <br><br><br>
+        <p>The chart shows that although different forms of gambling have been providing tax revenue for the government over the last 3 decades, it is important that overall tax receipts have shown steady growth with a current revenue of £3 billion each year.</p>
+        <br><br>
+        <p>This data was accessed through a gov.uk csv download and cleaned using <a href="https://colab.research.google.com/drive/1ijHdsn0B2sIS6i9WjlHYw95ESowWkxRq?usp=sharing">Pandas.</a> Because of the reputable source, the formatting is the same each year, allowing for replicability once the annual report is published using loops.</p>
+        <div class="chart" id="Chart6" ></div>
+        <br><br><br>
+        <p>As well as increasing tax revenues, the gambling market provides jobs for people in deprived areas. The R2 value of 0.41 suggests a positive correlation between deprived areas and gambling industry employment. However, an argument could be made that gambling companies seek to capitalise on the poorest of individuals when deciding where to set up business. When cleaning the data, I chose to exclude Stoke-on-Trent and Three Rivers as these have key headquarters for top companies in the areas and would skew the results.</p>
+
         <hr style="color: black; border-style: solid; background-color: black;">
-        <h3>By downloading census data from Nomis on business and labour market statistics, I was able to visualise the relationship between the number of gambling businesses and the unemployment rate. Although there are a large number of factors that influence unemployment, a weak positive correlation can still be seen between unemployment and the number of gambling businesses, for the group as a whole and at the regional level. Even though gambling businesses provide deprived areas with employment, the correlation suggests that there exists more unemployment in areas where there are more gambling businesses. The data required <a href="https://colab.research.google.com/drive/1EyhdYrd8DUVbcU3UkqqPqY4o8yYPRy-w?usp=sharing">concatenating</a> the tables together and dropping several columns and NaN values before reaching a TIDY format.</h3>
-    
-        <div class="chart" id="Chart27"></div>
-
-    </div> 
-    <div class="myWeek1">
-
-        <h3>This chart was scraped form gov.uk UK betting and gaming statistics summary using read_html in Python. The link to the python notebook can be found <a href="https://colab.research.google.com/drive/1AyUV2E-ITVIlKAAL49HQLkgcDhcpVCvi?usp=sharing">here</a></h3>
-        <div class="chart" id="Chart28"></div>
-
-    </div> 
-
-    <hr style="color: black; border-style: solid; background-color: black;">
-    <div class="myWeek1">
-        <h1>Concluding Remarks</h1>    
-        <hr style="color: black; border-style: solid; background-color: black;">
-        <h3>The data suggests that although gambling does have costs to society, it can also provide economic benefits if properly regulated. The stable rate of all gambling activities coupled with decreasing gambling participation shows that the UK has the issue of gambling under control and the market is being regulated effectively. Crucially, tax revenues are above the costs of harm that gambling has on society, so the industry remains self-sufficient.</h3>
-
-    </div> 
-
-
-    
-    <div class="myWeek1">
-        <hr style="color: black; border-style: solid; background-color: black;">
-        <h3>Word Count: 777</h3>
-        <hr style="color: black; border-style: solid; background-color: black;">
-        <h1>References</h1> 
-        <hr style="color: black; border-style: solid; background-color: black;">
-        <h3>IGB 2022: <a href="https://igamingbusiness.com/finance/gb-gross-gambling-yield-recovers-to-almost-10bn-in-2021-22/">Source</a></h3> 
-        <h3>Chart 1: <a href="https://www.casinocity.com/casinos/">Source</a></p>
-        <h3>Chart 2: <a href="https://uk.finance.yahoo.com/"></a>Source</p>
-        <h3>Chart 3: <a href="https://www.begambleaware.org/sites/default/files/2021-06/Annual_GB_Treatment_and_Support_Survey_2020_report_%28FINAL%29_26.03.21.pdf">Source</a></h3>
-        <h3>Chart 4: <a href="https://www.gov.uk/government/statistics/uk-betting-and-gaming-statistics">Source</a></h3>
-        <h3>Chart 5: <a href="https://www.gov.uk/government/statistics/uk-betting-and-gaming-statistics">Source</a></h3>
-        <h3>Chart 6: <a href="https://www.nomisweb.co.uk/query/select/getdatasetbytheme.asp?theme=27">Source</a> and <a href="https://opendatacommunities.org/slice?dataset=http%3A%2F%2Fopendatacommunities.org%2Fdata%2Fsocietal-wellbeing%2Fimd2019%2Findicesbyla&http%3A%2F%2Fopendatacommunities.org%2Fdef%2Fontology%2Fcommunities%2Fsocietal_wellbeing%2Fimd%2Findices=http%3A%2F%2Fopendatacommunities.org%2Fdef%2Fconcept%2Fgeneral-concepts%2Fimd%2Fcombineddeprivation&http%3A%2F%2Fopendatacommunities.org%2Fdef%2Fontology%2Ftime%2FrefPeriod=http%3A%2F%2Freference.data.gov.uk%2Fid%2Fyear%2F2019">Source</a> </h3>
-        <h3>Chart 7: <a href="https://www.nomisweb.co.uk/query/select/getdatasetbytheme.asp?theme=27">Source</a></h3>
-        <h3>Chart 8: <a href="https://www.gov.uk/government/statistics/uk-betting-and-gaming-statistics">Source</a></h3>
+        <h4>The Costs of Gambling</h4>
+        <br><p>By downloading census data from Nomis on business and labour market statistics, I was able to visualise the relationship between the number of gambling businesses and the unemployment rate. Although there are a large number of factors that influence unemployment, a weak positive correlation can still be seen between unemployment and the number of gambling businesses, for the group as a whole and at the regional level. Even though gambling businesses provide deprived areas with employment, the correlation suggests that there exists more unemployment in areas where there are more gambling businesses. The data required <a href="https://colab.research.google.com/drive/1EyhdYrd8DUVbcU3UkqqPqY4o8yYPRy-w?usp=sharing">concatenating</a> the tables together and dropping several columns before diving by population sizes to get more comparable values.</p>
+        <div class="chart" id="Chart7"></div>
+        <br>
+        <br>
+        <br><p>This chart was scraped form gov.uk UK betting and gaming statistics summary using read_html in Python. The link to the python notebook can be found <a href="https://colab.research.google.com/drive/1AyUV2E-ITVIlKAAL49HQLkgcDhcpVCvi?usp=sharing">here</a></p>
+        <br>
+        <div class="chart" id="Chart8"></div>
+        <br><br><br>
+        <h4>Conclusion</h4>
+        <p>The data suggests that although gambling does have costs to society, it can also provide economic benefits if properly regulated. The stable rate of all gambling activities coupled with decreasing gambling participation shows that the UK has the issue of gambling under control and markets is being regulated effectively. Crucially, tax revenues are above the costs of harm that gambling has on society, therefore the industry remains self-sufficient.</p>
+        <br><br><hr style="color: black; border-style: solid; background-color: black;">
+        <br><p>Word Count: 798</p>
+        <br><br><hr style="color: black; border-style: solid; background-color: black;">
+        <h4>References</h4>
+        <br><p>IGB 2022: <a href="https://igamingbusiness.com/finance/gb-gross-gambling-yield-recovers-to-almost-10bn-in-2021-22/">Source</a></p>
+        <br><p>Chart 1: <a href="https://www.casinocity.com/casinos/">Source</a></p>
+        <br><p>Chart 2: <a href="https://uk.finance.yahoo.com/"></a>Source</p>
+        <br><p>Chart 3: <a href="https://www.begambleaware.org/sites/default/files/2021-06/Annual_GB_Treatment_and_Support_Survey_2020_report_%28FINAL%29_26.03.21.pdf">Source</a></p>
+        <br><p>Chart 4: <a href="https://www.gov.uk/government/statistics/uk-betting-and-gaming-statistics">Source</a></p>
+        <br><p>Chart 5: <a href="https://www.gov.uk/government/statistics/uk-betting-and-gaming-statistics">Source</a></p>
+        <br><p>Chart 6: <a href="https://www.nomisweb.co.uk/query/select/getdatasetbytheme.asp?theme=27">Source</a> and <a href="https://opendatacommunities.org/slice?dataset=http%3A%2F%2Fopendatacommunities.org%2Fdata%2Fsocietal-wellbeing%2Fimd2019%2Findicesbyla&http%3A%2F%2Fopendatacommunities.org%2Fdef%2Fontology%2Fcommunities%2Fsocietal_wellbeing%2Fimd%2Findices=http%3A%2F%2Fopendatacommunities.org%2Fdef%2Fconcept%2Fgeneral-concepts%2Fimd%2Fcombineddeprivation&http%3A%2F%2Fopendatacommunities.org%2Fdef%2Fontology%2Ftime%2FrefPeriod=http%3A%2F%2Freference.data.gov.uk%2Fid%2Fyear%2F2019">Source</a></p>
+        <br><p>Chart 7: <a href="https://www.nomisweb.co.uk/query/select/getdatasetbytheme.asp?theme=27">Source</a></p>
+        <br><p>Chart 8: <a href="https://www.gov.uk/government/statistics/uk-betting-and-gaming-statistics">Source</a></p>
 
 
-    </div> 
 
+
+
+    </section> 
+
+
+
+
+<br><br><br><br><br><br>
+  
 
 </body>
 
-<!-- //////////// END BODY /////////////  -->
 
 <script>
     //Define charts:
-    var projectChart1 = "project_charts/project_casino_map.json";
-    var projectChart2 = "project_charts/project_uk_stocks.json";
-    var projectChart3 = "project_charts/project_who_gambles_graph.json";
-    var projectChart4 = "project_charts/project_where_gamble.json";
-    var projectChart5 = "project_charts/project_tax_revenue_trellis.json";
-    var projectChart6 = "project_charts/project_regession.json";
-    var projectChart7 = "project_charts/project_scatter_region.json";
-    var projectChart8 = "project_charts/project_pie.json";
+    var myChart1 = "project_charts/project_casino_map.json";
+    var myChart2 = "project_charts/project_uk_stocks.json";
+    var myChart3 = "project_charts/project_who_gambles_graph.json";
+    var myChart4 = "project_charts/project_where_gamble.json";
+    var myChart5 = "project_charts/project_tax_revenue_trellis.json";
+    var myChart6 = "project_charts/project_regession.json";
+    var myChart7 = "project_charts/project_scatter_region.json";
+    var myChart8 = "project_charts/project_pie.json";
+
+
+
 
     // Embed charts:
-    vegaEmbed('#Chart21', projectChart1);
-    vegaEmbed('#Chart22', projectChart2);
-    vegaEmbed('#Chart23', projectChart3);
-    vegaEmbed('#Chart24', projectChart4);
-    vegaEmbed('#Chart25', projectChart5);
-    vegaEmbed('#Chart26', projectChart6);
-    vegaEmbed('#Chart27', projectChart7);
-    vegaEmbed('#Chart28', projectChart8);
-  
+    vegaEmbed('#Chart1', myChart1);
+    vegaEmbed('#Chart2', myChart2);
+    vegaEmbed('#Chart3', myChart3);
+    vegaEmbed('#Chart4', myChart4);
+    vegaEmbed('#Chart5', myChart5);
+    vegaEmbed('#Chart6', myChart6);
+    vegaEmbed('#Chart7', myChart7);
+    vegaEmbed('#Chart8', myChart8);
+
+
+
 </script>
 
-</div>
-
 </html>
+
