@@ -286,9 +286,10 @@ margin-top: 1%
 
 .grid-container {
   display: grid;
-  grid-template-columns: auto auto auto;  /* specify 3 columns */
-  grid-gap: 0px;  /* specify a gap value here */
-  justify-items: center;  /* center the items along the x-axis */
+  grid-template-columns: auto auto auto;  
+  grid-gap: 0px;  
+  justify-items: center;  
   margin: auto;
   max-width: 900px;
+  width: 5000px;
 }
