@@ -17,7 +17,7 @@
     <title>Data Science Project</title>
 
     <!--CSS Style Sheet-->
-    <link rel="stylesheet" href="index_reconfig.css">
+    <link rel="stylesheet" href="styles.css">
 
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
@@ -34,12 +34,14 @@
 
 <body>
         <!-- navigation bar  -->
-        <ul>
-            <li style="float:right"><a href="https://github.com/MorganDaviesEcon/MorganDaviesEcon.github.io">Github</a></li>
-            <li style="float:right"><a href="project.html">Project</a></li>
-            <li style="float:right"><a href="portfolio.html">Portfolio</a></li>
-            <li style="float:right"><a href="index.html">Home</a></li>
-        </ul>
+        <div class="TOP_NAV">
+
+            <a href="index.html">HOME</a>
+            <a  href="portfolio.html">PORTFOLIO</a>
+            <a class="active" href="project.html">PROJECT</a>
+            <a href="https://github.com/morgandaviesecon">GITHUB</a>
+    
+        </div>
 
 
 
@@ -111,20 +113,18 @@
         <h3></h3>
         <p>These 9 charts were batch downloaded using this <a href="https://colab.research.google.com/drive/1Q3aPb1kxex_-W8pPYf2h9X9hS_FrsmkJ?usp=sharing">python notebook</a> using the ONS API</p>
         
-        <div class="container">
 
-            <div class="grid-item"><div class="chart" id="Chart7"></div></div>
-            <div class="grid-item"><div class="chart" id="Chart8"></div></div>
-            <div class="grid-item"><div class="chart" id="Chart9"></div></div>
-            <div class="grid-item"><div class="chart" id="Chart10"></div></div>
-            <div class="grid-item"><div class="chart" id="Chart11"></div></div>
-            <div class="grid-item"><div class="chart" id="Chart12"></div></div>
-            <div class="grid-item"><div class="chart" id="Chart13"></div></div>
-            <div class="grid-item"><div class="chart" id="Chart14"></div></div>
-            <div class="grid-item"><div class="chart" id="Chart15"></div></div>
-
-        </div>
-
+        <div class="grid-container" style = "display: grid;">
+            <div class="grid-item"><div class = dashchart id = "Chart7" style = "display: block;"></div></div>
+            <div class="grid-item"><div class = dashchart id = "Chart8" style = "display: block;"></div></div>
+            <div class="grid-item"><div class = dashchart id = "Chart9" style = "display: block;"></div></div>
+            <div class="grid-item"><div class = dashchart id = "Chart10" style = "display: block;"></div></div>
+            <div class="grid-item"><div class = dashchart id = "Chart11" style = "display: block;"></div></div>
+            <div class="grid-item"><div class = dashchart id = "Chart12" style = "display: block;"></div></div>
+            <div class="grid-item"><div class = dashchart id = "Chart13" style = "display: block;"></div></div>
+            <div class="grid-item"><div class = dashchart id = "Chart14" style = "display: block;"></div></div>
+            <div class="grid-item"><div class = dashchart id = "Chart15" style = "display: block;"></div></div>
+        </div> 
 
     </div> 
     <div class="myWeek1">
@@ -160,10 +160,10 @@
     <div class="myweek1">
         <h1>Task 8</h1>
 
-        <h3>Advanced Charts - produce two charts that use advanced analytics (regression python notebook <a href="https://colab.research.google.com/drive/1l-YqqaHuuLhvlmDQwIssAs_3ncXvYQoY?usp=sharing">here</a>)</h3>
+        <h3>Advanced Charts - produce two charts that use advanced analytics (regression python notebook <a href="https://colab.research.google.com/drive/1FtYPoE-wh01NNtg9W1At1EVxdUIcbQTj?usp=sharing">here</a>)</h3>
 
         <div class="chart" id="Chart21"></div>
-        <div class="chart" id="Chart22"></div>
+        <div class="chart" id="Chart23"></div>
 
     </div>
 
@@ -225,6 +225,7 @@
     var myChart20 = "charts/US_labour_market_shortage.json";
     var myChart21 = "charts/GDPpc_HDI.json";
     var myChart22 = "charts/msft_aapl_regression.json";
+    var myChart23 = "project_charts/project_regession.json";
 
 
 
@@ -252,6 +253,7 @@
     vegaEmbed('#Chart20', myChart20);
     vegaEmbed('#Chart21', myChart21);
     vegaEmbed('#Chart22', myChart22);
+    vegaEmbed('#Chart23', myChart23);
   
 </script>
 
