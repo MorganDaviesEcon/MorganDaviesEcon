@@ -73,9 +73,10 @@
     "tooltip": [
       {"field": "region", "type": "nominal", "title": "Region"},
       {
-        "field": "count_per_1000",
+        "field": "count_per_100000",
         "type": "quantitative",
-        "title": "Gambling Businesses per 1000:"
+        "title": "Gambling Businesses per 100,000:",
+        "format":"0.2f"
       },
       {"field": "year", "type": "quantitative", "title": "Year"}
     ]
