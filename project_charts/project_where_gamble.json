@@ -4,11 +4,9 @@
     "url": "https://raw.githubusercontent.com/MorganDaviesEcon/MorganDaviesEcon.github.io/main/NEW_project_gambling_activities_test.csv"
   },
   "title": {
-    "text": "Figure 4: Percentage of Individuals who have Gambled in the last 4 Weeks by Activity",
-    "subtitle": [
-      "Source: Gambling Comission",
-      ""
-    ],
+    "text": "Figure 4: Percentage of Individuals who have Gambled",
+    "subtitle": ["In the last 4 Weeks by Activity",
+      "Source: Gambling Comission", ""],
     "subtitleFontStyle": "italic",
     "fontSize": 14.5,
     "subtitleFontSize": 11.2,
@@ -19,13 +17,17 @@
   "config": {
     "padding": {"top": 10},
     "background": "rgb(251, 245, 233)",
-    "view": {
-      "width": 200,
-      "height": 250,
-    "stroke": "transparent"
-  }
+    "view": {"width": 250, "height": 300, "stroke": "transparent"}
   },
-  "repeat": {"layer": ["Year to Sept 2018","Year to Sept 2019","Year to Sept 2020","Year to Sept 2021","Year to Sept 2022"]},
+  "repeat": {
+    "layer": [
+      "Year to Sept 2018",
+      "Year to Sept 2019",
+      "Year to Sept 2020",
+      "Year to Sept 2021",
+      "Year to Sept 2022"
+    ]
+  },
   "spec": {
     "mark": "bar",
     "encoding": {
@@ -34,7 +36,7 @@
         "type": "nominal",
         "title": null,
         "axis": {"grid": false, "gridColor": "black"},
-        "sort":{"field":"Year to Sept 2018","order":"descending"}
+        "sort": {"field": "Year to Sept 2018", "order": "descending"}
       },
       "x": {
         "field": {"repeat": "layer"},
@@ -52,17 +54,20 @@
       "color": {
         "datum": {"repeat": "layer"},
         "title": "Year",
-        "scale": {
-        "scheme": "tableau20"},
+        "scale": {"scheme": "tableau20"},
         "legend": {
-          "orient": "right",
+          "orient": "bottom-right",
           "fillColor": "rgb(251, 245, 233)",
           "labelColor": "#000000"
         }
       },
       "yOffset": {"datum": {"repeat": "layer"}},
       "tooltip": [
-        {"field": "gambling_activity", "type": "nominal", "title": "Type of Gambling"},
+        {
+          "field": "gambling_activity",
+          "type": "nominal",
+          "title": "Type of Gambling"
+        },
         {
           "field": "Year to Sept 2018",
           "type": "quantitative",
@@ -73,17 +78,17 @@
           "type": "quantitative",
           "title": "Year to Sept 19 (%)"
         },
-                  {
+        {
           "field": "Year to Sept 2020",
           "type": "quantitative",
           "title": "Year to Sept 20 (%)"
         },
-                  {
+        {
           "field": "Year to Sept 2021",
           "type": "quantitative",
           "title": "Year to Sept 21 (%)"
         },
-                  {
+        {
           "field": "Year to Sept 2022",
           "type": "quantitative",
           "title": "Year to Sept 22 (%)"

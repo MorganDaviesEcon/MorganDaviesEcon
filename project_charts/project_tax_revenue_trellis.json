@@ -2,10 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "Figure 5: Tax Revenues for Gambling Activities",
-    "subtitle": [
-      "Receipts in £ thousands. Source: Gov.UK",
-      ""
-    ],
+    "subtitle": ["Receipts in £ thousands. Source: Gov.UK", ""],
     "subtitleFontStyle": "italic",
     "subtitleFontSize": 12.5,
     "fontSize": 15.5,
@@ -16,8 +13,8 @@
     "url": "https://raw.githubusercontent.com/MorganDaviesEcon/MorganDaviesEcon.github.io/main/NEW1_year_gambling_tax_revenue_TIDY.csv"
   },
   "background": "rgb(251, 245, 233)",
-  "height": 70,
-  "width": 50,
+  "height": 100,
+  "width": 100,
   "mark": {"type": "line", "strokeWidth": 1.2},
   "encoding": {
     "x": {
@@ -26,11 +23,7 @@
       "title": null,
       "axis": {"grid": true, "labelAngle": 30, "labelFontSize": 12}
     },
-    "y": {
-      "field": "value",
-      "type": "quantitative",
-      "title": "Receipts"
-    },
+    "y": {"field": "value", "type": "quantitative", "title": "Receipts"},
     "facet": {
       "field": "variable",
       "columns": 3,
@@ -44,24 +37,29 @@
     "color": {
       "value": "black",
       "condition": [
-        {"test": "datum.variable =='General Betting Duty'", "value": "firebrick"},
+        {
+          "test": "datum.variable =='General Betting Duty'",
+          "value": "firebrick"
+        },
         {"test": "datum.variable =='Pool Betting Duty'", "value": "blue"},
         {"test": "datum.variable =='Betting Total'", "value": "darkblue"},
         {"test": "datum.variable =='Gaming Duty'", "value": "gold"},
         {"test": "datum.variable =='Remote Gaming Duty'", "value": "red"},
-        {"test": "datum.variable =='Amusement Machine Licence Duty'", "value": "darkblue"},
+        {
+          "test": "datum.variable =='Amusement Machine Licence Duty'",
+          "value": "darkblue"
+        },
         {"test": "datum.variable =='Bingo Duty'", "value": "darkorange"},
         {"test": "datum.variable =='Machine Games Duty'", "value": "darkred"},
         {"test": "datum.variable =='Lottery Duty'", "value": "forestgreen"},
-        {"test": "datum.variable =='Total betting and gaming receipts'", "value": "purple"}
+        {
+          "test": "datum.variable =='Total betting and gaming receipts'",
+          "value": "purple"
+        }
       ]
     },
     "tooltip": [
-      {
-        "field": "value",
-        "type": "quantitative",
-        "title": "Duty £ Thousands"
-      },
+      {"field": "value", "type": "quantitative", "title": "Duty £ Thousands"},
       {"field": "Year", "type": "temporal", "title": "Year"}
     ]
   },
