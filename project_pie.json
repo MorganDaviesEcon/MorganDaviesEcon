@@ -13,8 +13,8 @@
     "color": "black"
   },
   "background": "rgb(251, 245, 233)",
-  "height":400,
-  "width":450,
+  "height":300,
+  "width":350,
   "data": {
     "url": "https://raw.githubusercontent.com/MorganDaviesEcon/MorganDaviesEcon.github.io/main/donut_chart.csv"
   },
